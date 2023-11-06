@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: poppins;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 2rem;
+}
+
+.container {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container span:first-child {
+  font-size: 8rem;
+}
+
+.container span:nth-child(2) {
+  font-size: 3rem;
+}
+
+.container i {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  margin: 2rem 0;
+}
+
+.intro:nth-child(even) {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.intro:nth-child(even) .intro__desc {
+  padding-left: 3rem;
+}
+
+.intro .intro__img {
+  overflow: hidden;
+  width: 50%;
+  border-radius: 2rem;
+}
+
+.intro .intro__img img {
+  width: 100%;
+  filter: blur(2rem);
+  transition: 0.45s;
+  border-radius: 2rem;
+}
+.intro .intro__img.show {
+  overflow: visible;
+}
+.intro .intro__img img.show {
+  box-shadow: 0 1rem 2rem #00000083;
+  filter: blur(0);
+}
+
+.intro .intro__desc {
+  padding-top: 3rem;
+}
+
+.intro .intro__desc h1 {
+  font-size: 2.7rem;
+}
+
+.intro .intro__desc p {
+  font-size: 1.7rem;
+}
+@media (min-width: 768px) {
+  .intro .intro__img {
+    width: 40%;
+  }
+
+  .intro .intro__desc {
+    padding-top: 6rem;
+  }
+
+  .intro .intro__desc h1 {
+    font-size: 3.7rem;
+  }
+
+  .intro .intro__desc p {
+    font-size: 3.7rem;
+  }
+}
